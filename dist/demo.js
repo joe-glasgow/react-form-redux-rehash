@@ -11381,26 +11381,26 @@ module.exports = warning;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.SubmitButton = exports.Text = undefined;
 
 var _Text = __webpack_require__(154);
 
 Object.defineProperty(exports, 'Text', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Text).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _interopRequireDefault(_Text).default;
+    }
 });
 
 var _SubmitButton = __webpack_require__(410);
 
 Object.defineProperty(exports, 'SubmitButton', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_SubmitButton).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _interopRequireDefault(_SubmitButton).default;
+    }
 });
 
 var _react = __webpack_require__(7);
@@ -11441,17 +11441,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactTapEventPlugin2.default)();
 
 var SmartForm = (0, _reactRedux.connect)(function (state) {
-  return state;
+    return state;
 }, actions)(_Form2.default);
 
 var reduxMiddleware = (0, _redux.applyMiddleware)(_reduxThunk2.default, (0, _reduxLogger.createLogger)());
 
 exports.default = function (props) {
-  return _react2.default.createElement(
-    _reactRedux.Provider,
-    { store: (0, _redux.compose)(reduxMiddleware)(_redux.createStore)(_store2.default) },
-    _react2.default.createElement(SmartForm, props)
-  );
+    return _react2.default.createElement(
+        _reactRedux.Provider,
+        { store: (0, _redux.compose)(reduxMiddleware)(_redux.createStore)(_store2.default) },
+        _react2.default.createElement(SmartForm, props)
+    );
 };
 
 /***/ }),
@@ -11476,26 +11476,25 @@ var _index2 = _interopRequireDefault(_index);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(
-  _index2.default,
-  null,
-  _react2.default.createElement(_index.Text, {
-    name: 'name',
-    validate: ['required'],
-    placeholder: 'Type your name here',
-    label: 'Your name' }),
-  _react2.default.createElement(_index.Text, {
-    name: 'email',
-    validate: ['required', 'email'],
-    placeholder: 'Type your email here',
-    label: 'E-mail' }),
-  _react2.default.createElement(_index.Text, {
-    name: 'website',
-    validate: ['url'],
-    placeholder: 'Type your website url here',
-    label: 'Website' }),
-  _react2.default.createElement(_index.SubmitButton, null)
-), document.getElementById('container'));
-// demo.js
+    _index2.default,
+    null,
+    _react2.default.createElement(_index.Text, {
+        name: 'name',
+        validate: ['required'],
+        placeholder: 'Type your name here',
+        label: 'Your name' }),
+    _react2.default.createElement(_index.Text, {
+        name: 'email',
+        validate: ['required', 'email'],
+        placeholder: 'Type your email here',
+        label: 'E-mail' }),
+    _react2.default.createElement(_index.Text, {
+        name: 'website',
+        validate: ['url'],
+        placeholder: 'Type your website url here',
+        label: 'Website' }),
+    _react2.default.createElement(_index.SubmitButton, null)
+), document.getElementById('container')); // demo.js
 
 /***/ }),
 /* 152 */
@@ -11505,7 +11504,7 @@ _reactDom2.default.render(_react2.default.createElement(
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.update = update;
 exports.reset = reset;
@@ -11517,20 +11516,20 @@ var c = _interopRequireWildcard(_constants);
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function update(name, value) {
-  return function (dispatch) {
-    return dispatch({
-      type: c.FORM_UPDATE_VALUE,
-      name: name, value: value
-    });
-  };
+    return function (dispatch) {
+        return dispatch({
+            type: c.FORM_UPDATE_VALUE,
+            name: name, value: value
+        });
+    };
 }
 
 function reset() {
-  return function (dispatch) {
-    return dispatch({
-      type: c.FORM_RESET
-    });
-  };
+    return function (dispatch) {
+        return dispatch({
+            type: c.FORM_RESET
+        });
+    };
 }
 
 /***/ }),
@@ -11541,7 +11540,7 @@ function reset() {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11571,104 +11570,106 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // no operation
 var noop = function noop() {
-  return undefined;
+    return undefined;
 };
 var validations = [];
 
 var Form = function (_Component) {
-  _inherits(Form, _Component);
+    _inherits(Form, _Component);
 
-  function Form(props) {
-    _classCallCheck(this, Form);
+    function Form(props) {
+        _classCallCheck(this, Form);
 
-    var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 
-    _this.registerValidation = _this.registerValidation.bind(_this);
-    _this.isFormValid = _this.isFormValid.bind(_this);
-    _this.submit = _this.submit.bind(_this);
-    _this.removeValidation = _this.removeValidation.bind(_this);
-    return _this;
-  }
-  /* validations */
-
-
-  _createClass(Form, [{
-    key: 'registerValidation',
-    value: function registerValidation(isValidFunc) {
-      validations = [].concat(_toConsumableArray(validations), [isValidFunc]);
-      return this.removeValidation(isValidFunc);
+        _this.registerValidation = _this.registerValidation.bind(_this);
+        _this.isFormValid = _this.isFormValid.bind(_this);
+        _this.submit = _this.submit.bind(_this);
+        _this.removeValidation = _this.removeValidation.bind(_this);
+        return _this;
     }
-  }, {
-    key: 'removeValidation',
-    value: function removeValidation(ref) {
-      this.validations = (0, _lodash2.default)(this.validations, ref);
-    }
-  }, {
-    key: 'isFormValid',
-    value: function isFormValid(showErrors) {
-      return validations.reduce(function (memo, isValidFunc) {
-        return isValidFunc(showErrors) && memo;
-      }, true);
-    }
-  }, {
-    key: 'submit',
 
-    /*submit*/
-    value: function submit() {
-      if (this.isFormValid(true)) {
-        this.props.onSubmit((0, _lodash4.default)({}, this.props.values));
-        this.props.reset();
-      }
-    }
-  }, {
-    key: 'getChildContext',
-    value: function getChildContext() {
-      return {
-        update: this.props.update,
-        reset: this.props.reset,
-        submit: this.submit,
-        values: this.props.values,
-        registerValidation: this.registerValidation,
-        isFormValid: this.isFormValid
-      };
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'form',
-        null,
-        this.props.children
-      );
-    }
-  }]);
+    /* validations */
 
-  return Form;
+
+    _createClass(Form, [{
+        key: 'registerValidation',
+        value: function registerValidation(isValidFunc) {
+            validations = [].concat(_toConsumableArray(validations), [isValidFunc]);
+            return this.removeValidation(isValidFunc);
+        }
+    }, {
+        key: 'removeValidation',
+        value: function removeValidation(ref) {
+            this.validations = (0, _lodash2.default)(this.validations, ref);
+        }
+    }, {
+        key: 'isFormValid',
+        value: function isFormValid(showErrors) {
+            return validations.reduce(function (memo, isValidFunc) {
+                return isValidFunc(showErrors) && memo;
+            }, true);
+        }
+    }, {
+        key: 'submit',
+
+
+        /*submit*/
+        value: function submit() {
+            if (this.isFormValid(true)) {
+                this.props.onSubmit((0, _lodash4.default)({}, this.props.values));
+                this.props.reset();
+            }
+        }
+    }, {
+        key: 'getChildContext',
+        value: function getChildContext() {
+            return {
+                update: this.props.update,
+                reset: this.props.reset,
+                submit: this.submit,
+                values: this.props.values,
+                registerValidation: this.registerValidation,
+                isFormValid: this.isFormValid
+            };
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'form',
+                null,
+                this.props.children
+            );
+        }
+    }]);
+
+    return Form;
 }(_react.Component);
 
 exports.default = Form;
 ;
 
 Form.propTypes = {
-  children: _react.PropTypes.node,
-  values: _react.PropTypes.object,
-  update: _react.PropTypes.func,
-  reset: _react.PropTypes.func,
-  onSubmit: _react.PropTypes.func
+    children: _react.PropTypes.node,
+    values: _react.PropTypes.object,
+    update: _react.PropTypes.func,
+    reset: _react.PropTypes.func,
+    onSubmit: _react.PropTypes.func
 };
 
 Form.childContextTypes = {
-  update: _react.PropTypes.func,
-  reset: _react.PropTypes.func,
-  submit: _react.PropTypes.func,
-  values: _react.PropTypes.object,
-  registerValidation: _react.PropTypes.func,
-  removeValidation: _react.PropTypes.func,
-  isFormValid: _react.PropTypes.func
+    update: _react.PropTypes.func,
+    reset: _react.PropTypes.func,
+    submit: _react.PropTypes.func,
+    values: _react.PropTypes.object,
+    registerValidation: _react.PropTypes.func,
+    removeValidation: _react.PropTypes.func,
+    isFormValid: _react.PropTypes.func
 };
 
 Form.defaultProps = {
-  onSubmit: noop
+    onSubmit: noop
 };
 
 /***/ }),
@@ -11679,7 +11680,7 @@ Form.defaultProps = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11713,127 +11714,127 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // no operation
 var noop = function noop() {
-  return undefined;
+    return undefined;
 };
 
 var Text = function (_Component) {
-  _inherits(Text, _Component);
+    _inherits(Text, _Component);
 
-  function Text(props) {
-    _classCallCheck(this, Text);
+    function Text(props) {
+        _classCallCheck(this, Text);
 
-    // errors
-    var _this = _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).call(this, props));
+        // errors
+        var _this = _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).call(this, props));
 
-    _this.state = {
-      errors: []
-    };
-    _this.isValid = _this.isValid.bind(_this);
-    _this.onChange = _this.onChange.bind(_this);
-    _this.onBlur = _this.onBlur.bind(_this);
-    return _this;
-  }
-
-  _createClass(Text, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      var _this2 = this;
-
-      this.removeValidationFromContext = this.context.registerValidation(function (show) {
-        return _this2.isValid(show);
-      });
+        _this.state = {
+            errors: []
+        };
+        _this.isValid = _this.isValid.bind(_this);
+        _this.onChange = _this.onChange.bind(_this);
+        _this.onBlur = _this.onBlur.bind(_this);
+        return _this;
     }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      this.removeValidationFromContext();
-    }
-  }, {
-    key: 'updateValue',
-    value: function updateValue(value) {
-      var _this3 = this;
 
-      this.context.update(this.props.name, value);
+    _createClass(Text, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
 
-      if (this.state.errors.length) {
-        setTimeout(function () {
-          return _this3.isValid(true);
-        }, 0);
-      }
-    }
-  }, {
-    key: 'onChange',
-    value: function onChange(event) {
-      this.updateValue(event.target.value);
-    }
-  }, {
-    key: 'isValid',
-    value: function isValid(showErrors) {
-      var _this4 = this;
+            this.removeValidationFromContext = this.context.registerValidation(function (show) {
+                return _this2.isValid(show);
+            });
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.removeValidationFromContext();
+        }
+    }, {
+        key: 'updateValue',
+        value: function updateValue(value) {
+            var _this3 = this;
 
-      var errors = this.props.validate.reduce(function (memo, currentName) {
-        return memo.concat(validators[currentName](_this4.context.values[_this4.props.name]));
-      }, []);
+            this.context.update(this.props.name, value);
 
-      if (showErrors) {
-        this.setState({
-          errors: errors
-        });
-      }
-      return !errors.length;
-    }
-  }, {
-    key: 'onBlur',
-    value: function onBlur() {
-      this.isValid(true);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _MuiThemeProvider2.default,
-        null,
-        _react2.default.createElement(_TextField2.default, { hintText: this.props.placeholder,
-          floatingLabelText: this.props.label,
-          value: this.context.values[this.props.name],
-          onChange: this.onChange.bind(this),
-          onBlur: this.onBlur.bind(this),
-          errorText: this.state.errors.length ? _react2.default.createElement(
-            'div',
-            null,
-            this.state.errors.map(function (error, i) {
-              return _react2.default.createElement(
-                'div',
-                { key: i },
-                error
-              );
-            })
-          ) : null })
-      );
-    }
-  }]);
+            if (this.state.errors.length) {
+                setTimeout(function () {
+                    return _this3.isValid(true);
+                }, 0);
+            }
+        }
+    }, {
+        key: 'onChange',
+        value: function onChange(event) {
+            this.updateValue(event.target.value);
+        }
+    }, {
+        key: 'isValid',
+        value: function isValid(showErrors) {
+            var _this4 = this;
 
-  return Text;
+            var errors = this.props.validate.reduce(function (memo, currentName) {
+                return memo.concat(validators[currentName](_this4.context.values[_this4.props.name]));
+            }, []);
+
+            if (showErrors) {
+                this.setState({
+                    errors: errors
+                });
+            }
+            return !errors.length;
+        }
+    }, {
+        key: 'onBlur',
+        value: function onBlur() {
+            this.isValid(true);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _MuiThemeProvider2.default,
+                null,
+                _react2.default.createElement(_TextField2.default, { hintText: this.props.placeholder,
+                    floatingLabelText: this.props.label,
+                    value: this.context.values[this.props.name],
+                    onChange: this.onChange.bind(this),
+                    onBlur: this.onBlur.bind(this),
+                    errorText: this.state.errors.length ? _react2.default.createElement(
+                        'div',
+                        null,
+                        this.state.errors.map(function (error, i) {
+                            return _react2.default.createElement(
+                                'div',
+                                { key: i },
+                                error
+                            );
+                        })
+                    ) : null })
+            );
+        }
+    }]);
+
+    return Text;
 }(_react.Component);
 
 exports.default = Text;
 ;
 
 Text.defaultProps = {
-  validate: [],
-  removeValidationFromContext: noop
+    validate: [],
+    removeValidationFromContext: noop
 };
 
 Text.propTypes = {
-  name: _react.PropTypes.string.isRequired,
-  placeholder: _react.PropTypes.string,
-  label: _react.PropTypes.string
+    name: _react.PropTypes.string.isRequired,
+    placeholder: _react.PropTypes.string,
+    label: _react.PropTypes.string
 };
 
 Text.contextTypes = {
-  update: _react.PropTypes.func.isRequired,
-  values: _react.PropTypes.object.isRequired,
-  registerValidation: _react.PropTypes.func.isRequired
+    update: _react.PropTypes.func.isRequired,
+    values: _react.PropTypes.object.isRequired,
+    registerValidation: _react.PropTypes.func.isRequired
 };
 
 /***/ }),
@@ -11844,7 +11845,7 @@ Text.contextTypes = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _constants = __webpack_require__(97);
@@ -11862,26 +11863,26 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = { //define initial state - an empty form
-  values: {}
+    values: {}
 };
 
 exports.default = function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+    var action = arguments[1];
 
-  switch (action.type) {
+    switch (action.type) {
 
-    case c.FORM_UPDATE_VALUE:
-      return (0, _lodash2.default)({}, state, {
-        values: (0, _lodash2.default)({}, state.values, _defineProperty({}, action.name, action.value))
-      });
+        case c.FORM_UPDATE_VALUE:
+            return (0, _lodash2.default)({}, state, {
+                values: (0, _lodash2.default)({}, state.values, _defineProperty({}, action.name, action.value))
+            });
 
-    case c.FORM_RESET:
-      return initialState;
+        case c.FORM_RESET:
+            return initialState;
 
-    default:
-      return state;
-  }
+        default:
+            return state;
+    }
 };
 
 /***/ }),
@@ -35640,7 +35641,7 @@ exports.default = MuiThemeProvider;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.required = required;
 exports.url = url;
@@ -35658,15 +35659,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // src/validators.js
 function required(value) {
-  return !value ? ['This field cannot be empty'] : [];
+    return !value ? ['This field cannot be empty'] : [];
 }
 
 function url(value) {
-  return value && !_validUrl2.default.isWebUri(value) ? ['This URL is invalid'] : [];
+    return value && !_validUrl2.default.isWebUri(value) ? ['This URL is invalid'] : [];
 }
 
 function email(value) {
-  return !_emailValidator2.default.validate(value) ? ['This email address is invalid'] : [];
+    return !_emailValidator2.default.validate(value) ? ['This email address is invalid'] : [];
 }
 
 /***/ }),
@@ -36948,7 +36949,7 @@ module.exports = without;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -36975,42 +36976,46 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var SubmitButton = function (_Component) {
-  _inherits(SubmitButton, _Component);
+    _inherits(SubmitButton, _Component);
 
-  function SubmitButton() {
-    _classCallCheck(this, SubmitButton);
+    function SubmitButton() {
+        _classCallCheck(this, SubmitButton);
 
-    return _possibleConstructorReturn(this, (SubmitButton.__proto__ || Object.getPrototypeOf(SubmitButton)).apply(this, arguments));
-  }
-
-  _createClass(SubmitButton, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _MuiThemeProvider2.default,
-        null,
-        _react2.default.createElement(_RaisedButton2.default, {
-          primary: true,
-          disabled: !this.context.isFormValid(),
-          label: this.props.label,
-          onTouchTap: this.context.submit })
-      );
+        return _possibleConstructorReturn(this, (SubmitButton.__proto__ || Object.getPrototypeOf(SubmitButton)).apply(this, arguments));
     }
-  }]);
 
-  return SubmitButton;
+    _createClass(SubmitButton, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _MuiThemeProvider2.default,
+                null,
+                _react2.default.createElement(_RaisedButton2.default, {
+                    primary: true,
+                    disabled: !this.context.isFormValid(),
+                    label: this.props.label,
+                    onTouchTap: this.context.submit })
+            );
+        }
+    }]);
+
+    return SubmitButton;
 }(_react.Component);
 
 exports.default = SubmitButton;
 ;
 
 SubmitButton.propTypes = {
-  label: _react.PropTypes.string
-}, SubmitButton.contextTypes = {
-  isFormValid: _react.PropTypes.func.isRequired,
-  submit: _react.PropTypes.func.isRequired
-}, SubmitButton.defaultProps = {
-  label: 'Submit'
+    label: _react.PropTypes.string
+};
+
+SubmitButton.contextTypes = {
+    isFormValid: _react.PropTypes.func.isRequired,
+    submit: _react.PropTypes.func.isRequired
+};
+
+SubmitButton.defaultProps = {
+    label: 'Submit'
 };
 
 /***/ }),
