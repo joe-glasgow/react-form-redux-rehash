@@ -18,9 +18,15 @@ Run the following command:
 
     npm install; npm run build; npm run watch;
 
+Load the file *dist/demo.html* into your browser to see the goodies!
+
+## Testing
+
 If you wish to run any tests I have included the brilliant [enzyme](https://github.com/airbnb/enzyme) test suite from [airbnb](https://github.com/airbnb), and you can run it as follows:
 
     npm test
+
+## Thats all folks!
 
 If you wish to contact me, please feel free to do so via [ScotCode](http://scotcode.co.uk)
 
