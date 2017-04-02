@@ -18,8 +18,8 @@ Run the following command:
 
     npm install; npm run build; npm run watch;
 
-If you wish to run any tests I have included the brilliant (enzyme)[https://github.com/airbnb/enzyme] test suite from (airbnb)[https://github.com/airbnb], and you can run it as follows:
+If you wish to run any tests I have included the brilliant [enzyme](https://github.com/airbnb/enzyme) test suite from (airbnb)[https://github.com/airbnb], and you can run it as follows:
 
     npm test
 
-If you wish to contact me, please feel free to do so via (ScotCode)[http://scotcode.co.uk]
+If you wish to contact me, please feel free to do so via [ScotCode](http://scotcode.co.uk)
