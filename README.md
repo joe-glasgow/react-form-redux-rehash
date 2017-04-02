@@ -23,3 +23,5 @@ If you wish to run any tests I have included the brilliant [enzyme](https://gith
     npm test
 
 If you wish to contact me, please feel free to do so via [ScotCode](http://scotcode.co.uk)
+
+Pull Request Away!
